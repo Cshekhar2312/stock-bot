@@ -1,7 +1,7 @@
 module.exports = function (app, crawlerService) {
     app.get('/crawler/start', function (req, res) {
         crawlerService.start(function (result) {
-            res.json({ running : true});
+            res.json(result);
         });
     });
 
